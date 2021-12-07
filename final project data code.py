@@ -14,7 +14,7 @@ demandfy = [1000,1200,1800,1200,1000,1400,1600,1000]
 for x in demandfy:
     retailcenter = []
     for t in range(1,11):
-        if x == demandfy[1-1] or x == demandfy[2-1] or x == demandfy[4-1] or x == demandfy[5-1]:
+        if x == demandfy[1-1] or x == demandfy[2-1] or x == demandfy[4-1] or x == demandfy[5-1] or x == demandfy[8-1]:
             d = x+0.20*(x)*(t-1)
             retailcenter.append(d)
         else:
@@ -24,7 +24,7 @@ for x in demandfy:
 dfdemand = pd.DataFrame(demand,columns=[1,2,3,4,5,6,7,8,9,10])
 dfdemand.index = [1,2,3,4,5,6,7,8]
 dfdemand
-
+print(dfdemand)
 
 # columns are years, rows are retaliers
 # select values through indexing column and row: dfdemand[1][2]
